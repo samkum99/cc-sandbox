@@ -21,7 +21,9 @@ Clears your terminal, paints it **black**, and displays a bright white bold gree
 ## Usage
 
 ```bash
-python3 hello.py
+python3 hello.py                  # greets "there" (default)
+python3 hello.py --name Sam       # greets a specific name
+python3 hello.py --help           # show usage info
 ```
 
 ---
@@ -30,8 +32,9 @@ python3 hello.py
 
 | Component | What it does |
 |-----------|-------------|
-| `greet(name)` | Returns a greeting string. Defaults to `"there"`. |
-| `main()` | Clears the screen, fills it dark, and centers the greeting. |
+| `--name NAME` | Optional CLI argument. Defaults to `"there"` if omitted. |
+| `greet(name)` | Returns a greeting string for the given name. |
+| `main()` | Parses args, clears the screen, fills it dark, and centers the greeting. |
 | ANSI codes | Drive the full-screen black background + bright white bold text. |
 
 You can also import `greet` from another module:
