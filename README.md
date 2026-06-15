@@ -1,6 +1,22 @@
-# hello.py
+# cc-sandbox
 
-A tiny Python script that prints a friendly greeting.
+> A friendly full-screen greeting for your terminal — in dark mode.
+
+---
+
+## Demo
+
+```
+ _   _      _ _         _   _
+| | | | ___| | | ___   | |_| |__   ___ _ __ ___
+| |_| |/ _ \ | |/ _ \  | __| '_ \ / _ \ '__/ _ \
+|  _  |  __/ | | (_) | | |_| | | |  __/ | |  __/
+|_| |_|\___|_|_|\___/   \__|_| |_|\___|_|  \___|
+```
+
+Clears your terminal, paints it **black**, and displays a bright white bold greeting — centered on screen.
+
+---
 
 ## Usage
 
@@ -8,17 +24,27 @@ A tiny Python script that prints a friendly greeting.
 python3 hello.py
 ```
 
-Output:
-
-```
-Hello, there! Hope you're having a great day.
-```
+---
 
 ## How it works
 
-- `greet(name="there")` builds and returns a greeting string. Pass a name to
-  personalize it (e.g. `greet("Sam")`).
-- `main()` prints the default greeting.
-- The script only runs `main()` when executed directly, so you can also import
-  `greet` from another module.
-# cc-sandbox
+| Component | What it does |
+|-----------|-------------|
+| `greet(name)` | Returns a greeting string. Defaults to `"there"`. |
+| `main()` | Clears the screen, fills it dark, and centers the greeting. |
+| ANSI codes | Drive the full-screen black background + bright white bold text. |
+
+You can also import `greet` from another module:
+
+```python
+from hello import greet
+print(greet("Sam"))
+# Hello, Sam! Hope you're having a great day.
+```
+
+---
+
+## Requirements
+
+- Python 3.6+
+- A terminal that supports ANSI escape codes (macOS Terminal, iTerm2, VS Code terminal, etc.)
