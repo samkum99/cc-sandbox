@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """A simple script that prints a friendly greeting."""
 
+import argparse
 import os
 import shutil
 
@@ -15,6 +16,10 @@ def greet(name="there"):
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Print a full-screen greeting.")
+    parser.add_argument("--name", default="there", help="Name to greet")
+    args = parser.parse_args()
+
     cols, rows = shutil.get_terminal_size()
 
     # Clear screen and set black background across entire terminal
@@ -27,7 +32,7 @@ def main():
         print(blank)
 
     # Print greeting centered vertically and horizontally
-    msg = greet()
+    msg = greet(args.name)
     row = rows // 2
     col = (cols - len(msg)) // 2
     print(f"\033[{row};{col}H{msg}", end="", flush=True)
