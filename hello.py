@@ -9,10 +9,11 @@ RESET      = "\033[0m"
 BOLD       = "\033[1m"
 DARK_BG    = "\033[40m"
 LIGHT_TEXT = "\033[97m"
+CYAN       = "\033[96m"
 
 
 def greet(name="there"):
-    return f"Hello, {name}! Hope you're having a great day."
+    return f"Hello, {CYAN}{name}{LIGHT_TEXT}! Hope you're having a great day."
 
 
 def main():
