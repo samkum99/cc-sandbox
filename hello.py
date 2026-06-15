@@ -20,6 +20,7 @@ def greet(name="there"):
 def main():
     parser = argparse.ArgumentParser(description="Print a full-screen greeting.")
     parser.add_argument("--name", default="there", help="Name to greet")
+    parser.add_argument("--version", action="version", version="hello.py 1.0.0")
     args = parser.parse_args()
 
     cols, rows = shutil.get_terminal_size()
