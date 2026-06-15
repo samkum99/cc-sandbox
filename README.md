@@ -14,7 +14,7 @@
 |_| |_|\___|_|_|\___/   \__|_| |_|\___|_|  \___|
 ```
 
-Clears your terminal, paints it **black**, and displays a bright white bold greeting — centered on screen.
+Clears your terminal, paints it **black**, and displays a bright white bold greeting — centered on screen. The greeted name appears in **cyan**.
 
 ---
 
@@ -33,16 +33,16 @@ python3 hello.py --help           # show usage info
 | Component | What it does |
 |-----------|-------------|
 | `--name NAME` | Optional CLI argument. Defaults to `"there"` if omitted. |
-| `greet(name)` | Returns a greeting string for the given name. |
+| `greet(name)` | Returns a greeting string with the name highlighted in cyan. |
 | `main()` | Parses args, clears the screen, fills it dark, and centers the greeting. |
-| ANSI codes | Drive the full-screen black background + bright white bold text. |
+| ANSI codes | Drive the full-screen black background, bright white bold text, and cyan name. |
 
 You can also import `greet` from another module:
 
 ```python
 from hello import greet
 print(greet("Sam"))
-# Hello, Sam! Hope you're having a great day.
+# Hello, [cyan]Sam[/cyan]! Hope you're having a great day.
 ```
 
 ---
