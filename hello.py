@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """A simple script that prints a friendly greeting."""
+# Use /pr-summary <ticket-id> to generate a PR description from staged changes.
 
 import argparse
 import os
