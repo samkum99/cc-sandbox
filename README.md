@@ -21,3 +21,4 @@ Hello, there! Hope you're having a great day.
 - `main()` prints the default greeting.
 - The script only runs `main()` when executed directly, so you can also import
   `greet` from another module.
+# cc-sandbox
